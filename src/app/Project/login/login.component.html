@@ -1,0 +1,7 @@
+<form [formGroup]="loginForm" (submit)="login()">
+  <label for="Username">Username: <input type="text" formControlName="username"></label><br>
+  <label for="Password">Password: <input type="password" formControlName="password"></label><br>
+  <input class="button" type="submit" value="Login">
+</form>
+
+<label *ngIf="errorMessage">{{errorMessage}}</label>
