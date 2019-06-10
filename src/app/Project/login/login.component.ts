@@ -15,6 +15,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
+  
   errorMessage:string=null;
   loginForm = new FormGroup({
     username:new FormControl("", Validators.required),
@@ -25,7 +26,7 @@ export class LoginComponent implements OnInit {
     if(this.loginForm.valid){
       this.usersService.getUsers().then((usersData:any[])=>{
         if(usersData.find(user=>user.username===this.loginForm.value.username && user.password===this.loginForm.value.password)){
-          this.router.navigateByUrl("/heroes");
+          this.router.navigateByUrl("/products");
         }
         else{
           this.errorMessage="Invalid login credentials.";

@@ -10,6 +10,9 @@ import {HeroesComponent} from './HeroesModule/heroes/heroes.component';
 import { HeroDetailComponent } from './HeroesModule/hero-detail/hero-detail.component';
 import { MessagesComponent } from './HeroesModule/messages/messages.component';
 import { LoginComponent } from './Project/login/login.component';
+import { ProductComponent } from './Project/product/product.component';
+import { ProductsDashboardComponent } from './Project/products-dashboard/products-dashboard.component';
+import { ProductRowComponent } from './Project/product-row/product-row.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { LoginComponent } from './Project/login/login.component';
     HeroesMasterComponent,
     HeroDetailComponent,
     MessagesComponent,
-    LoginComponent
+    LoginComponent,
+    ProductComponent,
+    ProductsDashboardComponent,
+    ProductRowComponent
   ],
   imports: [
     BrowserModule,

@@ -3,6 +3,6 @@
         {"username":"admin","password":"admin"}
     ],
     "products":[
-
+        {"id":1, "name":"Tshirt","price":299,"category":"clothing"}
     ]
 }

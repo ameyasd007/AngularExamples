@@ -1,0 +1,15 @@
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Category</th>
+    <th>Price</th>
+  </tr>
+  <tr *ngFor="let product of products">
+      <td>{{product.id}}</td>
+      <td>{{product.name}}</td>
+      <td>{{product.category}}</td>
+      <td>{{product.price}}</td>
+  </tr>
+  <!-- <app-product-row *ngFor="let product of products" [product]="product"></app-product-row> -->
+</table>
