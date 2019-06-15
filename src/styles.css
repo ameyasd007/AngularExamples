@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+.green {
+  color: white;
+  background: black;
+  font: bold;
+  float: right;
+  border-color: black;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: separate;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 3px;
+}
+
+tr:nth-child(even) {
+  background-color: #eeeeee;
+}
+
+.borderSpacing {
+  border: black solid;
+  padding: 5px;
+  margin: 5px;
+}

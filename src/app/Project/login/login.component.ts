@@ -9,32 +9,39 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  constructor(private usersService: UsersService, private router: Router) {}
 
-  constructor(private usersService:UsersService, private router:Router) { }
+  errorMessage: string = null;
 
-  ngOnInit() {
-  }
-
-  
-  errorMessage:string=null;
   loginForm = new FormGroup({
-    username:new FormControl("", Validators.required),
-    password: new FormControl("", Validators.required)
-  })
+    username: new FormControl('', Validators.required),
+    password: new FormControl('', Validators.required)
+  });
 
-  login(){
-    if(this.loginForm.valid){
-      this.usersService.getUsers().then((usersData:any[])=>{
-        if(usersData.find(user=>user.username===this.loginForm.value.username && user.password===this.loginForm.value.password)){
-          this.router.navigateByUrl("/products");
-        }
-        else{
-          this.errorMessage="Invalid login credentials.";
-        }
-      }).catch();      
-    }
-    else{
-      this.errorMessage="Please fill all the details.";
+  ngOnInit() {}
+
+  login() {
+    if (this.loginForm.valid) {
+      this.usersService
+        .getUsers()
+        .then((usersData: any[]) => {
+          if (
+            usersData.find(
+              user =>
+                user.username === this.loginForm.value.username &&
+                user.password === this.loginForm.value.password
+            )
+          ) {
+            localStorage.setItem('isLoggedIn', 'true');
+            this.router.navigateByUrl('/products');
+          } else {
+            localStorage.setItem('isLoggedIn', null);
+            this.errorMessage = 'Invalid login credentials.';
+          }
+        })
+        .catch();
+    } else {
+      this.errorMessage = 'Please fill all the details.';
     }
   }
 }

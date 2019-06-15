@@ -1,0 +1,12 @@
+<form [formGroup]="form">
+  <fieldset>
+    <legend>Create New Item</legend>
+    Name:
+    <input type="text" formControlName="name" />
+    Category: <input type="text" formControlName="category" /> Price:
+    <input type="number" formControlName="price" />
+  </fieldset>
+  <button (click)="SaveItem()">{{ ButtonName }} Item</button>
+</form>
+
+<a routerLink="/products">Back to Products List</a>

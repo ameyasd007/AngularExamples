@@ -1,8 +1,28 @@
 {
-    "users":[
-        {"username":"admin","password":"admin"}
-    ],
-    "products":[
-        {"id":1, "name":"Tshirt","price":299,"category":"clothing"}
-    ]
+  "users": [
+    {
+      "username": "admin",
+      "password": "admin"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "asd",
+      "category": "sdfsdf",
+      "price": 545
+    },
+    {
+      "id": 2,
+      "name": "asdf",
+      "category": "sgf",
+      "price": 65
+    },
+    {
+      "id": 3,
+      "name": "sdf",
+      "category": "sdfg",
+      "price": null
+    }
+  ]
 }
